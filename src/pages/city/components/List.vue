@@ -80,14 +80,11 @@
   </div>
 </template>
 <script>
-import BetterScroll from 'better-scroll'
+import BScroll from '@better-scroll/core'
 export default {
   name: 'CityList',
   mounted () {
-    this.scroll = new BetterScroll(this.$refs.wrapper, {
-      movable: true,
-      zoom: true
-    })
+    this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -107,7 +104,6 @@ export default {
     left: 0
     right: 0
     bottom: 0
-    overflow: hidden
   .title
     line-height: .54rem
     background: #eee
