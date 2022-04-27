@@ -84,16 +84,18 @@ import BScroll from '@better-scroll/core'
 export default {
   name: 'CityList',
   mounted () {
+    debugger
     this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .boder-topbottom
+  @import '~styles/variables.styl'
+  .border-topbottom
     &:before
       border-color: #ccc
-    &after
+    &:after
       border-color: #ccc
   .border-bottom
     &:before
@@ -104,28 +106,27 @@ export default {
     left: 0
     right: 0
     bottom: 0
-    overflow: scroll;
-  .title
-    line-height: .54rem
-    background: #eee
-    padding-left: .2rem
-    color: #666
-    font-size: .26rem
-  .button-list
-    padding: .1rem
     overflow: hidden
-    padding: .1rem .6rem .1rem .1rem
-    .button-wrapper
-      float: left
-      width: 33.33%
-      .button
-        margin: .1rem
-        text-align: center
-        border: .02rem solid #ccc
-        padding: .1rem 0
-        border-radius: .06rem
-   .item-list
-     .item
-       line-height: .76rem
-       padding-left: .2rem
+    .title
+      line-height: .54rem
+      background: #eee
+      padding-left: .2rem
+      color: #666
+      font-size: .26rem
+    .button-list
+      overflow: hidden
+      padding: .1rem .6rem .1rem .1rem
+      .button-wrapper
+        float: left
+        width: 33.33%
+        .button
+          margin: .1rem
+          padding: .1rem 0
+          text-align: center
+          border: .02rem solid #ccc
+          border-radius: .06rem
+    .item-list
+      .item
+        line-height: .76rem
+        padding-left: .2rem
 </style>
