@@ -9,7 +9,11 @@
       ref="search"
       >
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom"
+        v-for="item of list"
+        :key="item.id"
+        @click="handelCityClick(item.name)"
+        >{{item.name}}</li>
         <li class="search-item border-bottom" v-if="hasNodata" >
           没有找到匹配数据
         </li>
@@ -34,6 +38,12 @@ export default {
   computed: {
     hasNodata () {
       return !this.list.length
+    }
+  },
+  methods: {
+    handelCityClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {

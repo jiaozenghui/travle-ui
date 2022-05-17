@@ -2,7 +2,6 @@ const proxy = {
     'GET /api/data': {
       ret:true,
       data: {
-        city: '北京',
         swiperList: [{
           id: '001',
           imgUrl: 'https://source.qunarzz.com/site/images/wns/20220301_qunar_dujia_homepage_a750x192_1.jpg'
