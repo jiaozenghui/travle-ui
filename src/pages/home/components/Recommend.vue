@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <router-link tag="li" :to="'detail/'+ item.id" class="item border-bottom"  v-for="item of list" :key="item.id">
+      <li @click="handleLiClick(item.id)" class="item border-bottom"  v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">
@@ -11,7 +11,7 @@
           <p class="item-desc">{{item.desc}}</p>
           <button class="item-button">查看详情</button>
         </div>
-      </router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -55,8 +55,10 @@ export default {
   props: {
     list: Array
   },
-  data () {
-    return {
+  methods: {
+    handleLiClick (id) {
+      alert(id)
+      this.$router.push('/detail/' + id)
     }
   }
 }

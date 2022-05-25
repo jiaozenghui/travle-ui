@@ -2,7 +2,7 @@
     <div>
         <detail-banner></detail-banner>
         <detail-header></detail-header>
-        <div class="content"></div>
+        <detail-content></detail-content>
     </div>
 </template>
 
@@ -13,12 +13,11 @@ export default {
   name: 'Detail',
   components: {
     DetailBanner,
-    DetailHeader
+    DetailHeader,
+    DetailContent: () => import('./components/Content')
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-  .content
-    height: 50rem
 </style>

@@ -49,34 +49,37 @@ export default {
 
 <style lang="stylus" scoped>
   @import '~styles/variables.styl'
+  .iconfont
+    font-family: "iconfont" !important;
   .header-abs
     position: absolute
-    left: .2rem
-    top: .2rem
-    height: .8rem
-    line-height: .8rem
-    width: .8rem
+    left: 4px
+    top: 4px
+    height: 36px;
+    line-height: 36px;
+    width: 36px
     border-radius: 100%
     text-align: center
-    background: rgba(0, 0, 0, 0.8)
+    background: rgba(0, 0, 0, 0.5)
     .header-abs-back
-      font-size: .4rem
+      font-size: .3rem
       color: #fff
   .header-fixed
     position: fixed
     top: 0
     left: 0
     right: 0
-    height: $headerHight
-    line-height: $headerHight
+    height: 44px
+    line-height: 44px
     text-align: center
     color: #fff
     background: $bgColor
-    font-size: .32rem
+    font-size: .2rem
+    z-index: 99
     .header-fixed-back
       height: .64rem
       text-align: center
-      font-size: .6rem
+      font-size: .3rem
       position: absolute
       top: 0
       left: 0
